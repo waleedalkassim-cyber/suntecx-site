@@ -1,14 +1,17 @@
-Suntecx Multi-Page Website
----------------------------
+Suntecx Multi-Page Website (Linked Logos)
+----------------------------------------
 Files:
-- index.html        (Home with hero, ecosystem logos, features)
-- solutions.html    (Solutions grid + supported brand logos)
+- index.html        (Home with hero, linked ecosystem logos, features)
+- solutions.html    (Solutions grid + linked brand logos)
 - contact.html      (Contact form)
-- styles.css        (shared styles: grey buttons, dark footer)
-All pages include:
-- Grey clickable buttons with visible labels
-- Suntecx logo image (inline, no external file needed)
-- Footer: darker grey + www.suntecx.ca
+- styles.css        (grey theme, buttons, dark footer)
+- assets/           (logo images)
+
+Brand links:
+- BAST -> https://www.bast-corp.ca
+- Control4 -> https://www.control4.com
+- Crestron -> https://www.crestron.com
+- Savant -> https://www.savant.com
 
 Deploy:
-Upload all files to your Vercel project root and deploy.
+Upload all files to your Vercel project root and redeploy.
