@@ -1,14 +1,9 @@
-Suntecx Website — Orbitron + Grey Logos
----------------------------------------
-Changes:
-- Orbitron font (modern tech look)
-- No pure black; only grey shades throughout
-- All logos (header/footer + ecosystem) uniform size and same grey tone
-- Linked brand logos to official sites
+Suntecx Website — ROLLBACK (Keep Original Look) + Surgical Fixes
+----------------------------------------------------------------
+- Inter font (original look preserved)
+- Suntecx logo colors preserved (no grey filter)
+- Partner logos uniform size and grey tone only
+- No solid black — only greys; footer shows www.suntecx.ca
+- Linked brand logos
 
-Files:
-- index.html, solutions.html, contact.html, styles.css
-- assets/suntecx.png, assets/bast.png, assets/control4.png, assets/crestron.png, assets/savant.png
-
-Deploy:
-Upload all files to your Vercel project root and redeploy.
+Deploy: upload all files to Vercel project root and redeploy.
