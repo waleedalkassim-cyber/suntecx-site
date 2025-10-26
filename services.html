@@ -16,11 +16,6 @@
     .card p { margin:0 16px 18px; color:var(--muted); }
     .back { display:block; text-align:center; margin:8px auto 32px; text-decoration:none; color:#555; }
   </style>
-
-<style id="gold-button-style">
-.gold-button{background-color:#000 !important;color:#cfae63 !important;border:1px solid #000 !important}
-.gold-button:hover{filter:brightness(1.08)}
-</style>
 </head>
 <body>
   <div class="wrap">
@@ -79,5 +74,38 @@
       </article>
     </div>
   </div>
+
+<style>
+/* === Suntecx CTA Gold Override === */
+.gold-button {
+  background-color:#000 !important;
+  color:#cfae63 !important;
+  border-color:#000 !important;
+  transition: color .3s ease, background-color .3s ease;
+}
+.gold-button:hover {
+  color:#cfae63 !important;
+  filter: brightness(1.1);
+}
+</style>
+<script>
+(function(){
+  function normalize(t){
+    return (t||"").toLowerCase().replace(/[\u2192\u27A1>]/g,"").replace(/\s+/g," ").trim();
+  }
+  var targets = ["get a quote","get a consultation","start now","send request"];
+  var nodes = document.querySelectorAll('a,button');
+  nodes.forEach(function(el){
+    var t = normalize(el.textContent);
+    if (targets.some(function(x){return t.indexOf(x) !== -1;})) {
+      el.classList.add('gold-button');
+      // hard override inline in case theme uses !important
+      el.style.setProperty('color', '#cfae63', 'important');
+      el.style.setProperty('background-color', '#000', 'important');
+      el.style.setProperty('border-color', '#000', 'important');
+    }
+  });
+})();
+</script>
 </body>
 </html>

@@ -46,11 +46,6 @@
       .logo-grid{grid-template-columns:repeat(2,1fr)}
     }
   </style>
-
-<style id="gold-button-style">
-.gold-button{background-color:#000 !important;color:#cfae63 !important;border:1px solid #000 !important}
-.gold-button:hover{filter:brightness(1.08)}
-</style>
 </head>
 <body>
   <header>
@@ -76,7 +71,7 @@
         <h1>Modern Automation for Smarter Living</h1>
         <p class="lead">Suntecx integrates lighting, shades, audio‑video, security, and ultra‑reliable networking—crafted for condos, custom homes, and commercial spaces.</p>
         <div style="display:flex;gap:10px;margin-top:16px">
-          <a href="#contact" class="btn gold-button" style="background-color:#000;color:#cfae63;border:1px solid #000" >Get a Consultation →</a style="background-color:#000;color:#cfae63;border:1px solid #000" >
+          <a href="#contact" class="btn gold-button gold-button">Get a Consultation →</a>
           <a href="#projects" class="btn btn-outline">View Projects</a>
         </div>
         <div class="chips">
@@ -211,7 +206,7 @@
           <label style="display:block;margin-top:12px">Message<br/>
             <textarea rows="5" placeholder="What would you like to achieve?" style="width:100%;padding:.8rem;border:1px solid var(--line);border-radius:14px"></textarea>
           </label>
-          <button class="btn gold-button" type="button" style="margin-top:12px" style="background-color:#000;color:#cfae63;border:1px solid #000" >Send Request →</button style="background-color:#000;color:#cfae63;border:1px solid #000" >
+          <button class="btn gold-button gold-button" type="button" style="margin-top:12px">Send Request →</button>
           <div class="muted" style="font-size:12px;margin-top:8px">We typically respond within one business day.</div>
         </form>
         <div class="tile">
@@ -244,7 +239,7 @@
       <div>
         <strong>Get a Quote</strong>
         <p class="muted" style="margin-top:8px">Share drawings and a brief scope— we’ll return a clear proposal.</p>
-        <a href="#contact" class="btn gold-button" style="margin-top:10px" style="background-color:#000;color:#cfae63;border:1px solid #000" >Start Now →</a style="background-color:#000;color:#cfae63;border:1px solid #000" >
+        <a href="#contact" class="btn gold-button gold-button" style="margin-top:10px">Start Now →</a>
       </div>
     </div>
     <div class="container" style="border-top:1px solid var(--line);margin-top:18px;padding-top:14px;font-size:12px;display:flex;justify-content:space-between;color:#6b7280">
@@ -254,5 +249,38 @@
   </footer>
 
   <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+
+<style>
+/* === Suntecx CTA Gold Override === */
+.gold-button {
+  background-color:#000 !important;
+  color:#cfae63 !important;
+  border-color:#000 !important;
+  transition: color .3s ease, background-color .3s ease;
+}
+.gold-button:hover {
+  color:#cfae63 !important;
+  filter: brightness(1.1);
+}
+</style>
+<script>
+(function(){
+  function normalize(t){
+    return (t||"").toLowerCase().replace(/[\u2192\u27A1>]/g,"").replace(/\s+/g," ").trim();
+  }
+  var targets = ["get a quote","get a consultation","start now","send request"];
+  var nodes = document.querySelectorAll('a,button');
+  nodes.forEach(function(el){
+    var t = normalize(el.textContent);
+    if (targets.some(function(x){return t.indexOf(x) !== -1;})) {
+      el.classList.add('gold-button');
+      // hard override inline in case theme uses !important
+      el.style.setProperty('color', '#cfae63', 'important');
+      el.style.setProperty('background-color', '#000', 'important');
+      el.style.setProperty('border-color', '#000', 'important');
+    }
+  });
+})();
+</script>
 </body>
 </html>
