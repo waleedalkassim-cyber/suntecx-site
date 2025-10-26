@@ -87,23 +87,76 @@
     </div>
   </section>
 
-  <section id="services">
-    <div class="container">
-      <div class="section-title">
-        <div class="muted" style="letter-spacing:.2em;text-transform:uppercase;font-size:12px">What we do</div>
-        <h2>End‑to‑End Design, Install, & Support</h2>
-        <p class="muted">From concept to commissioning—clean wiring and professional programming.</p>
-      </div>
-      <div class="grid-3">
-        <div class="tile"><strong>Smart Home Automation</strong><div class="subtitle">Scenes for lighting, climate, shades, AV, and security.</div></div>
-        <div class="tile"><strong>Audio / Video</strong><div class="subtitle">Multi‑room audio, theaters, and sleek wall controls.</div></div>
-        <div class="tile"><strong>Security & Cameras</strong><div class="subtitle">Surveillance, access control, and smart alerts.</div></div>
-        <div class="tile"><strong>Networking & Wi‑Fi</strong><div class="subtitle">Enterprise‑style reliability (UniFi & structured cabling).</div></div>
-        <div class="tile"><strong>Lighting & Scenes</strong><div class="subtitle">Modern dimming, sunrise/sunset, and occupancy logic.</div></div>
-        <div class="tile"><strong>Shades & Drapery (BAST)</strong><div class="subtitle">Silent motors, precise control, and designer fabrics.</div></div>
-      </div>
+  
+<section id="services" class="services">
+  <div class="container">
+    <h2 class="section-title">Our Services</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="assets/img/services/home-automation.webp" alt="Person using a wall tablet to control a modern smart home living room" width="1600" height="900" loading="lazy" />
+        <h3>Home Automation</h3>
+        <p>Control your lights, shades, audio, and security from one interface.</p>
+      </article>
+      <article class="card">
+        <img src="assets/img/services/audio-video-systems.webp" alt="Minimal home theater with in-wall speakers and large display" width="1600" height="900" loading="lazy" />
+        <h3>Audio / Video Systems</h3>
+        <p>Immersive sound and cinema-quality visuals integrated seamlessly.</p>
+      </article>
+      <article class="card">
+        <img src="assets/img/services/networking-wifi.webp" alt="Clean home network rack with structured wiring and access points" width="1600" height="900" loading="lazy" />
+        <h3>Networking &amp; Wi‑Fi</h3>
+        <p>Reliable, high-speed connectivity with full coverage and control.</p>
+      </article>
+      <article class="card">
+        <img src="assets/img/services/motorized-shades-bast.webp" alt="Automated roller shades filtering daylight in a modern living room" width="1600" height="900" loading="lazy" />
+        <h3>Shades &amp; Drapery (BAST)</h3>
+        <p>Silent motors, precise control, and designer fabrics.</p>
+      </article>
+      <article class="card">
+        <img src="assets/img/services/smart-lighting.webp" alt="Smart lighting scene controlled from a phone in a modern kitchen" width="1600" height="900" loading="lazy" />
+        <h3>Lighting &amp; Scenes</h3>
+        <p>Beautiful scenes, schedules, and occupancy logic.</p>
+      </article>
+      <article class="card">
+        <img src="assets/img/services/security-surveillance.webp" alt="Discreet security camera integrated on a modern home exterior" width="1600" height="900" loading="lazy" />
+        <h3>Security &amp; Cameras</h3>
+        <p>Surveillance, access control, and smart alerts.</p>
+      </article>
+      <article class="card">
+        <img src="assets/img/services/pro-integration.webp" alt="Wall-mounted touch panel controlling whole-home systems" width="1600" height="900" loading="lazy" />
+        <h3>Control4 / Savant / Crestron</h3>
+        <p>Professional integrations for advanced control and reliability.</p>
+      </article>
+      <article class="card">
+        <img src="assets/img/services/commercial-automation.webp" alt="Automated conference room with AV, lighting, and networking" width="1600" height="900" loading="lazy" />
+        <h3>Commercial Automation &amp; Networking</h3>
+        <p>Boardrooms, retail, and offices engineered for performance.</p>
+      </article>
+      <article class="card">
+        <img src="assets/img/services/multi-room-audio.webp" alt="Whole-home audio with discreet ceiling speakers controlled by an app" width="1600" height="900" loading="lazy" />
+        <h3>Multi‑Room Audio</h3>
+        <p>Music in every room—synchronized or individualized.</p>
+      </article>
+      <article class="card">
+        <img src="assets/img/services/remote-access.webp" alt="Smart-home app controlling lights, shades, and security remotely" width="1600" height="900" loading="lazy" />
+        <h3>Remote Access &amp; App Control</h3>
+        <p>Manage your home from anywhere with secure mobile apps.</p>
+      </article>
     </div>
-  </section>
+  </div>
+</section>
+
+<style>
+.services{background:#fafafa;padding:60px 20px}
+.services .section-title{text-align:center;font-weight:800;font-size:clamp(28px,3vw,40px);margin-bottom:40px;color:#2c2c2c}
+.services .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px}
+.services .card{background:#fff;border:1px solid #eee;border-radius:16px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.06);transition:transform .25s ease}
+.services .card:hover{transform:translateY(-4px)}
+.services .card img{display:block;width:100%;height:auto;object-fit:cover;aspect-ratio:16/9}
+.services .card h3{margin:14px 16px 6px;font-weight:700}
+.services .card p{margin:0 16px 18px;color:#5c5c5c}
+</style>
+
 
   <section id="integrations" style="background:#fafafa;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
     <div class="container">
