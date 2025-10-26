@@ -1,9 +1,14 @@
-Suntecx Site Package
---------------------
-This package contains:
-- index.html (styled, with grey buttons, dark footer, and brand logos section)
-- logo.png (placeholder 1x1 PNG; replace with your real header logo)
-- assets/ (placeholder grey SVG logos for BAST, Control4, Crestron, Savant)
+Suntecx Multi-Page Website
+---------------------------
+Files:
+- index.html        (Home with hero, ecosystem logos, features)
+- solutions.html    (Solutions grid + supported brand logos)
+- contact.html      (Contact form)
+- styles.css        (shared styles: grey buttons, dark footer)
+All pages include:
+- Grey clickable buttons with visible labels
+- Suntecx logo image (inline, no external file needed)
+- Footer: darker grey + www.suntecx.ca
 
-Deployment:
-Upload index.html, logo.png, and the assets/ folder to your Vercel project root.
+Deploy:
+Upload all files to your Vercel project root and deploy.
