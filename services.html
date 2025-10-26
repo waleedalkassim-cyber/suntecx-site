@@ -3,121 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Suntecx Services</title>
+  <title>Suntecx — Services</title>
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background-color: #fafafa;
-      color: #333;
-    }
-    .services {
-      padding: 60px 20px;
-    }
-    .section-title {
-      text-align: center;
-      font-weight: 800;
-      font-size: clamp(28px, 3vw, 40px);
-      margin-bottom: 40px;
-      color: #2c2c2c;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 28px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .card {
-      background: #fff;
-      border: 1px solid #eee;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
-      transition: transform 0.25s ease;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-    }
-    .card img {
-      display: block;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-    .card h3 {
-      margin: 16px;
-      font-size: 20px;
-      color: #333;
-      font-weight: 700;
-    }
-    .card p {
-      margin: 0 16px 20px;
-      color: #555;
-      line-height: 1.5;
-    }
+    :root { --bg:#fafafa; --fg:#2c2c2c; --muted:#5c5c5c; --card:#fff; --line:#eee; }
+    body { margin:0; background:var(--bg); color:var(--fg); font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+    .wrap { max-width:1200px; margin:0 auto; padding:60px 20px; }
+    h1 { font-size:clamp(28px,3vw,40px); margin:0 0 24px; font-weight:800; text-align:center; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:28px; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:0 6px 18px rgba(0,0,0,.06); }
+    .card img { width:100%; height:auto; aspect-ratio:16/9; object-fit:cover; display:block; }
+    .card h3 { margin:14px 16px 6px; font-weight:700; }
+    .card p { margin:0 16px 18px; color:var(--muted); }
+    .back { display:block; text-align:center; margin:8px auto 32px; text-decoration:none; color:#555; }
   </style>
 </head>
 <body>
-  <section id="services" class="services">
-    <h2 class="section-title">Our Services</h2>
+  <div class="wrap">
+    <a class="back" href="index.html">← Back to Home</a>
+    <h1>Our Services</h1>
     <div class="grid">
       <article class="card">
-        <img src="assets/img/services/A_webpage_showcases_ten_of_Suntecx's_services_rela.png#home-automation"
-             alt="Person using a wall tablet to control a modern smart home living room" />
+        <img src="assets/img/services/home-automation.webp" alt="Person using a wall tablet to control a modern smart home living room" />
         <h3>Home Automation</h3>
-        <p>Control your lights, shades, audio, and security from one interface.</p>
+        <p>Control lights, shades, audio, and security from one interface.</p>
       </article>
-
       <article class="card">
-        <img src="assets/img/services/A_webpage_showcases_ten_of_Suntecx's_services_rela.png#networking"
-             alt="Modern living room with high-speed networking and full Wi-Fi coverage" />
-        <h3>Networking &amp; Wi-Fi</h3>
-        <p>Reliable, high-speed connectivity with full coverage and control.</p>
+        <img src="assets/img/services/audio-video-systems.webp" alt="Minimal home theater with in-wall speakers and large display" />
+        <h3>Audio / Video Systems</h3>
+        <p>Discrete high-performance sound and cinema-grade visuals.</p>
       </article>
-
       <article class="card">
-        <img src="assets/img/services/A_webpage_showcases_ten_of_Suntecx's_services_rela.png#motorized-shades"
-             alt="Automated roller shades filtering daylight in a modern living room" />
-        <h3>Motorized Shades &amp; Draperies (BAST)</h3>
-        <p>Elegance, privacy, and comfort powered by our Canadian-made BAST motors.</p>
+        <img src="assets/img/services/networking-wifi.webp" alt="Clean home network rack with structured wiring and access points" />
+        <h3>Networking &amp; Wi‑Fi</h3>
+        <p>Rock-solid coverage, fast speeds, and pro-grade reliability.</p>
       </article>
-
       <article class="card">
-        <img src="assets/img/services/A_webpage_showcases_ten_of_Suntecx's_services_rela.png#security"
-             alt="Discreet security camera integrated on a modern home exterior" />
-        <h3>Security &amp; Surveillance</h3>
-        <p>Keep your home or business secure with smart cameras and access control.</p>
+        <img src="assets/img/services/motorized-shades-bast.webp" alt="Automated roller shades filtering daylight in a modern living room" />
+        <h3>Shades &amp; Drapery (BAST)</h3>
+        <p>Silent motors, precise control, and designer fabrics.</p>
       </article>
-
       <article class="card">
-        <img src="assets/img/services/A_webpage_showcases_ten_of_Suntecx's_services_rela.png#control4"
-             alt="Touchscreen automation panel showing control dashboard" />
+        <img src="assets/img/services/smart-lighting.webp" alt="Smart lighting scene controlled from a phone in a modern kitchen" />
+        <h3>Lighting &amp; Scenes</h3>
+        <p>Beautiful scenes, schedules, and occupancy logic.</p>
+      </article>
+      <article class="card">
+        <img src="assets/img/services/security-surveillance.webp" alt="Discreet security camera integrated on a modern home exterior" />
+        <h3>Security &amp; Cameras</h3>
+        <p>Surveillance, access control, and smart alerts.</p>
+      </article>
+      <article class="card">
+        <img src="assets/img/services/pro-integration.webp" alt="Wall-mounted touch panel controlling whole-home systems" />
         <h3>Control4 / Savant / Crestron</h3>
-        <p>Professional-grade integration with top automation ecosystems.</p>
+        <p>Professional integrations for advanced control and reliability.</p>
       </article>
-
       <article class="card">
-        <img src="assets/img/services/A_webpage_showcases_ten_of_Suntecx's_services_rela.png#commercial"
-             alt="Modern conference room with smart automation and AV integration" />
+        <img src="assets/img/services/commercial-automation.webp" alt="Automated conference room with AV, lighting, and networking" />
         <h3>Commercial Automation &amp; Networking</h3>
-        <p>Smart workplaces designed for productivity and reliability.</p>
+        <p>Boardrooms, retail, and offices engineered for performance.</p>
       </article>
-
       <article class="card">
-        <img src="assets/img/services/A_webpage_showcases_ten_of_Suntecx's_services_rela.png#multi-room-audio"
-             alt="Whole-home audio system controlled by mobile app" />
-        <h3>Multi-Room Audio</h3>
-        <p>Seamless audio in every space, controlled independently or together.</p>
+        <img src="assets/img/services/multi-room-audio.webp" alt="Whole-home audio with discreet ceiling speakers controlled by an app" />
+        <h3>Multi‑Room Audio</h3>
+        <p>Music in every room—synchronized or individualized.</p>
       </article>
-
       <article class="card">
-        <img src="assets/img/services/A_webpage_showcases_ten_of_Suntecx's_services_rela.png#remote-access"
-             alt="Smartphone showing app to control lights, shades, and security remotely" />
+        <img src="assets/img/services/remote-access.webp" alt="Smart‑home app controlling lights, shades, and security remotely" />
         <h3>Remote Access &amp; App Control</h3>
-        <p>Manage your property anywhere, anytime—securely from your smartphone.</p>
+        <p>Manage your home from anywhere with secure mobile apps.</p>
       </article>
     </div>
-  </section>
+  </div>
 </body>
 </html>
