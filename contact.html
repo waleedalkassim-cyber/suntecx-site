@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact — Suntecx</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="header">
-    <div class="wrap row">
+    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;">
       <a href="index.html" class="brand" aria-label="Suntecx home">
         <img src="assets/suntecx.png" alt="Suntecx logo"/>
       </a>
@@ -23,36 +23,31 @@
 
   <section class="section">
     <div class="wrap">
-      <h2>Contact Us</h2>
+      <h2 class="h2">Contact Us</h2>
       <p class="lead">Tell us about your project. We'll design the right package and roadmap for future upgrades.</p>
-      <div class="card" style="background:#fcfcfc">
+      <div>
         <form action="mailto:info@suntecx.ca" method="post" enctype="text/plain">
           <label class="sr-only" for="n">Name</label>
-          <input id="n" name="name" placeholder="Your name" style="width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;margin-bottom:10px" />
+          <input id="n" name="name" placeholder="Your name" style="width:100%;padding:12px 0;margin-bottom:10px" />
           <label class="sr-only" for="e">Email</label>
-          <input id="e" name="email" type="email" placeholder="Your email" style="width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;margin-bottom:10px" />
+          <input id="e" name="email" type="email" placeholder="Your email" style="width:100%;padding:12px 0;margin-bottom:10px" />
           <label class="sr-only" for="m">Message</label>
-          <textarea id="m" name="message" placeholder="Project details" rows="5" style="width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;margin-bottom:12px"></textarea>
+          <textarea id="m" name="message" placeholder="Project details" rows="5" style="width:100%;padding:12px 0;margin-bottom:12px"></textarea>
           <button class="btn" type="submit"><span>Send</span></button>
         </form>
       </div>
     </div>
   </section>
   <footer>
-    <div class="wrap footer-grid">
-      <div>
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-          <img src="assets/suntecx.png" alt="Suntecx logo small" style="height:22px;width:auto"/>
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/suntecx.png" alt="Suntecx logo small"/>
           <strong>Suntecx</strong>
         </div>
-        <div class="foot-note">Smart automation, AV, security & motorized shades. Serving GTA & beyond.</div>
+        <div>info@suntecx.ca &nbsp;•&nbsp; www.suntecx.ca</div>
       </div>
-      <div>
-        <div style="text-align:right">info@suntecx.ca<br/>www.suntecx.ca</div>
-      </div>
-    </div>
-    <div class="wrap" style="margin-top:12px">
-      <div class="tiny">© <span id="y"></span> Suntecx. All rights reserved.</div>
+      <div class="small" style="margin-top:8px">© <span id="y"></span> Suntecx. All rights reserved.</div>
     </div>
     <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
   </footer>
