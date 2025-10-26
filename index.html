@@ -34,11 +34,16 @@
     .muted{color:#6b7280}
     footer{border-top:1px solid var(--line);padding:40px 0}
     .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:20px}
+    .logo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px}
+    .logo-card{border:1px solid var(--line);border-radius:14px;background:#fff;padding:14px;display:flex;align-items:center;justify-content:center;height:96px}
+    .logo-card img{max-height:40px;max-width:160px;object-fit:contain;display:block}
+    .logo-card:hover{box-shadow:0 6px 22px rgba(0,0,0,.06)}
     @media (max-width: 980px){
       .hero-grid{grid-template-columns:1fr}
       .chips{grid-template-columns:repeat(3,1fr)}
       .grid-3{grid-template-columns:1fr}
       .footer-grid{grid-template-columns:1fr 1fr}
+      .logo-grid{grid-template-columns:repeat(2,1fr)}
     }
   </style>
 </head>
@@ -51,6 +56,7 @@
       <nav class="nav-links">
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
+        <a href="#integrations">Integrations</a>
         <a href="#about">About</a>
         <a href="#contact" class="btn" style="margin-left:22px">Get Quote →</a>
       </nav>
@@ -99,7 +105,43 @@
     </div>
   </section>
 
-  <section id="projects" class="projects" style="background:#fafafa;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <section id="integrations" style="background:#fafafa;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="container">
+      <div class="section-title">
+        <div class="muted" style="letter-spacing:.2em;text-transform:uppercase;font-size:12px">Ecosystem</div>
+        <h2>We integrate leading platforms</h2>
+        <p class="muted">All logos are uniformly sized and link to the official websites.</p>
+      </div>
+      <div class="logo-grid">
+        <a class="logo-card" href="https://www.control4.com/" target="_blank" rel="noopener">
+          <img src="./logos/control4.svg" alt="Control4" />
+        </a>
+        <a class="logo-card" href="https://www.crestron.com/" target="_blank" rel="noopener">
+          <img src="./logos/crestron.svg" alt="Crestron" />
+        </a>
+        <a class="logo-card" href="https://www.apple.com/ios/home/" target="_blank" rel="noopener">
+          <img src="./logos/applehome.svg" alt="Apple Home" />
+        </a>
+        <a class="logo-card" href="https://store.google.com/category/connected_home" target="_blank" rel="noopener">
+          <img src="./logos/googlehome.svg" alt="Google Home" />
+        </a>
+        <a class="logo-card" href="https://www.amazon.com/alexa-smart-home/b?ie=UTF8&node=13575702011" target="_blank" rel="noopener">
+          <img src="./logos/amazonalexa.svg" alt="Amazon Alexa" />
+        </a>
+        <a class="logo-card" href="https://ui.com/" target="_blank" rel="noopener">
+          <img src="./logos/unifi.svg" alt="UniFi" />
+        </a>
+        <a class="logo-card" href="https://www.lutron.com/" target="_blank" rel="noopener">
+          <img src="./logos/lutron.svg" alt="Lutron" />
+        </a>
+        <a class="logo-card" href="https://www.bast-corp.ca/" target="_blank" rel="noopener">
+          <img src="./logos/bast.svg" alt="BAST" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
     <div class="container">
       <div class="section-title">
         <div class="muted" style="letter-spacing:.2em;text-transform:uppercase;font-size:12px">Featured work</div>
