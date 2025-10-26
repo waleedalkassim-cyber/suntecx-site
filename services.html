@@ -1,146 +1,123 @@
-<!-- ======= SERVICES SECTION ======= -->
-<section id="services" class="services">
-  <div class="container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suntecx Services</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #fafafa;
+      color: #333;
+    }
+    .services {
+      padding: 60px 20px;
+    }
+    .section-title {
+      text-align: center;
+      font-weight: 800;
+      font-size: clamp(28px, 3vw, 40px);
+      margin-bottom: 40px;
+      color: #2c2c2c;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+      transition: transform 0.25s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 16px;
+      font-size: 20px;
+      color: #333;
+      font-weight: 700;
+    }
+    .card p {
+      margin: 0 16px 20px;
+      color: #555;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <section id="services" class="services">
     <h2 class="section-title">Our Services</h2>
-
     <div class="grid">
-      <!-- Home Automation -->
       <article class="card">
-        <img src="assets/img/services/home-automation.webp"
-             alt="Person using a wall tablet to control a modern smart home living room"
-             width="1600" height="900" loading="lazy" />
+        <img src="assets/img/services/A_webpage_showcases_ten_of_Suntecx's_services_rela.png#home-automation"
+             alt="Person using a wall tablet to control a modern smart home living room" />
         <h3>Home Automation</h3>
         <p>Control your lights, shades, audio, and security from one interface.</p>
       </article>
 
-      <!-- Audio / Video -->
       <article class="card">
-        <img src="assets/img/services/audio-video-systems.webp"
-             alt="Minimal home theater with in-wall speakers and large display"
-             width="1600" height="900" loading="lazy" />
-        <h3>Audio / Video Systems</h3>
-        <p>Immersive sound and cinema-quality visuals integrated seamlessly.</p>
-      </article>
-
-      <!-- Networking & Wi-Fi -->
-      <article class="card">
-        <img src="assets/img/services/networking-wifi.webp"
-             alt="Clean home network rack with structured wiring and access points"
-             width="1400" height="1050" loading="lazy" />
+        <img src="assets/img/services/A_webpage_showcases_ten_of_Suntecx's_services_rela.png#networking"
+             alt="Modern living room with high-speed networking and full Wi-Fi coverage" />
         <h3>Networking &amp; Wi-Fi</h3>
         <p>Reliable, high-speed connectivity with full coverage and control.</p>
       </article>
 
-      <!-- Motorized Shades (BAST) -->
       <article class="card">
-        <img src="assets/img/services/motorized-shades-bast.webp"
-             alt="Automated roller shades filtering daylight in a modern living room"
-             width="1600" height="900" loading="lazy" />
+        <img src="assets/img/services/A_webpage_showcases_ten_of_Suntecx's_services_rela.png#motorized-shades"
+             alt="Automated roller shades filtering daylight in a modern living room" />
         <h3>Motorized Shades &amp; Draperies (BAST)</h3>
         <p>Elegance, privacy, and comfort powered by our Canadian-made BAST motors.</p>
       </article>
 
-      <!-- Smart Lighting -->
       <article class="card">
-        <img src="assets/img/services/smart-lighting.webp"
-             alt="Smart lighting scene controlled from a phone in a modern kitchen"
-             width="1600" height="900" loading="lazy" />
-        <h3>Smart Lighting Control</h3>
-        <p>Set the mood and automate your lighting scenes effortlessly.</p>
-      </article>
-
-      <!-- Security -->
-      <article class="card">
-        <img src="assets/img/services/security-surveillance.webp"
-             alt="Discreet security camera integrated on a modern home exterior"
-             width="1600" height="900" loading="lazy" />
+        <img src="assets/img/services/A_webpage_showcases_ten_of_Suntecx's_services_rela.png#security"
+             alt="Discreet security camera integrated on a modern home exterior" />
         <h3>Security &amp; Surveillance</h3>
         <p>Keep your home or business secure with smart cameras and access control.</p>
       </article>
 
-      <!-- Control4 / Savant / Crestron -->
       <article class="card">
-        <img src="assets/img/services/pro-integration.webp"
-             alt="Wall-mounted touch panel controlling whole-home systems"
-             width="1500" height="1000" loading="lazy" />
+        <img src="assets/img/services/A_webpage_showcases_ten_of_Suntecx's_services_rela.png#control4"
+             alt="Touchscreen automation panel showing control dashboard" />
         <h3>Control4 / Savant / Crestron</h3>
         <p>Professional-grade integration with top automation ecosystems.</p>
       </article>
 
-      <!-- Commercial Automation -->
       <article class="card">
-        <img src="assets/img/services/commercial-automation.webp"
-             alt="Automated conference room with AV, lighting, and networking"
-             width="1600" height="900" loading="lazy" />
+        <img src="assets/img/services/A_webpage_showcases_ten_of_Suntecx's_services_rela.png#commercial"
+             alt="Modern conference room with smart automation and AV integration" />
         <h3>Commercial Automation &amp; Networking</h3>
         <p>Smart workplaces designed for productivity and reliability.</p>
       </article>
 
-      <!-- Multi-Room Audio -->
       <article class="card">
-        <img src="assets/img/services/multi-room-audio.webp"
-             alt="Whole-home audio with discreet ceiling speakers controlled by an app"
-             width="1600" height="900" loading="lazy" />
+        <img src="assets/img/services/A_webpage_showcases_ten_of_Suntecx's_services_rela.png#multi-room-audio"
+             alt="Whole-home audio system controlled by mobile app" />
         <h3>Multi-Room Audio</h3>
         <p>Seamless audio in every space, controlled independently or together.</p>
       </article>
 
-      <!-- Remote Access -->
       <article class="card">
-        <img src="assets/img/services/remote-access.webp"
-             alt="Smart-home app controlling lights, shades, and security remotely"
-             width="1500" height="1000" loading="lazy" />
+        <img src="assets/img/services/A_webpage_showcases_ten_of_Suntecx's_services_rela.png#remote-access"
+             alt="Smartphone showing app to control lights, shades, and security remotely" />
         <h3>Remote Access &amp; App Control</h3>
         <p>Manage your property anywhere, anytime—securely from your smartphone.</p>
       </article>
     </div>
-  </div>
-</section>
-
-<!-- ======= SERVICES STYLES ======= -->
-<style>
-.services {
-  background-color: #fafafa;
-  padding: 60px 20px;
-}
-.services .section-title {
-  text-align: center;
-  font-weight: 800;
-  font-size: clamp(28px, 3vw, 40px);
-  margin-bottom: 40px;
-  color: #2c2c2c;
-}
-.services .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 28px;
-}
-.services .card {
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
-  transition: transform 0.25s ease;
-}
-.services .card:hover {
-  transform: translateY(-4px);
-}
-.services .card img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-.services .card h3 {
-  margin: 16px;
-  font-size: 20px;
-  color: #333;
-  font-weight: 700;
-}
-.services .card p {
-  margin: 0 16px 20px;
-  color: #555;
-  line-height: 1.5;
-}
-</style>
+  </section>
+</body>
+</html>
