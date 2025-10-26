@@ -4,79 +4,80 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Suntecx — Services</title>
-  
-<style>
-/* === Suntecx CTA Gold SUPER OVERRIDE === */
-.gold-button,
-.gold-button * {
-  color: #cfae63 !important;
-  -webkit-text-fill-color: #cfae63 !important;
-}
-.gold-button {
-  background-color:#000 !important;
-  border-color:#000 !important;
-}
-.gold-button svg,
-.gold-button svg * {
-  fill: #cfae63 !important;
-  stroke: #cfae63 !important;
-}
+  <style>
+    :root { --bg:#fafafa; --fg:#2c2c2c; --muted:#5c5c5c; --card:#fff; --line:#eee; }
+    body { margin:0; background:var(--bg); color:var(--fg); font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+    .wrap { max-width:1200px; margin:0 auto; padding:60px 20px; }
+    h1 { font-size:clamp(28px,3vw,40px); margin:0 0 24px; font-weight:800; text-align:center; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:28px; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:0 6px 18px rgba(0,0,0,.06); }
+    .card img { width:100%; height:auto; aspect-ratio:16/9; object-fit:cover; display:block; }
+    .card h3 { margin:14px 16px 6px; font-weight:700; }
+    .card p { margin:0 16px 18px; color:var(--muted); }
+    .back { display:block; text-align:center; margin:8px auto 32px; text-decoration:none; color:#555; }
+  </style>
+
+<style id="gold-button-style">
+.gold-button{background-color:#000 !important;color:#cfae63 !important;border:1px solid #000 !important}
+.gold-button:hover{filter:brightness(1.08)}
 </style>
-<script>
-(function(){
-  var GOLD = '#cfae63';
-  function matchesCTA(el){
-    var t = (el.innerText || el.textContent || '').toLowerCase().replace(/\s+/g,' ').trim();
-    return t.includes('get a quote') || t.includes('get a consultation') || t.includes('start now') || t.includes('send request');
-  }
-  function paint(el){
-    try{
-      el.classList.add('gold-button');
-      el.style.setProperty('color', GOLD, 'important');
-      el.style.setProperty('-webkit-text-fill-color', GOLD, 'important');
-      el.style.setProperty('background-color', '#000', 'important');
-      el.style.setProperty('border-color', '#000', 'important');
-      // descendents
-      var kids = el.querySelectorAll('*');
-      kids.forEach(function(k){
-        k.style.setProperty('color', GOLD, 'important');
-        k.style.setProperty('-webkit-text-fill-color', GOLD, 'important');
-        if (k.tagName === 'SVG' || k.tagName === 'PATH' || k.tagName === 'use'){
-          k.style.setProperty('fill', GOLD, 'important');
-          k.style.setProperty('stroke', GOLD, 'important');
-        }
-      });
-    }catch(e){}
-  }
-  function applyAll(){
-    var nodes = document.querySelectorAll('a,button,[role="button"]');
-    nodes.forEach(function(el){
-      if (matchesCTA(el)) paint(el);
-    });
-  }
-  // initial
-  if (document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', applyAll);
-  } else {
-    applyAll();
-  }
-  // also observe changes (for frameworks)
-  var obs = new MutationObserver(function(muts){
-    muts.forEach(function(m){
-      if (m.addedNodes){
-        m.addedNodes.forEach(function(n){
-          if (n.nodeType === 1){
-            if (matchesCTA(n)) paint(n);
-            n.querySelectorAll && n.querySelectorAll('a,button,[role="button"]').forEach(function(el){
-              if (matchesCTA(el)) paint(el);
-            });
-          }
-        });
-      }
-    });
-  });
-  obs.observe(document.documentElement, { childList: true, subtree: true });
-})();
-</script>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html">← Back to Home</a>
+    <h1>Our Services</h1>
+    <div class="grid">
+      <article class="card">
+        <img src="assets/img/services/home-automation.webp" alt="Person using a wall tablet to control a modern smart home living room" />
+        <h3>Home Automation</h3>
+        <p>Control lights, shades, audio, and security from one interface.</p>
+      </article>
+      <article class="card">
+        <img src="assets/img/services/audio-video-systems.webp" alt="Minimal home theater with in-wall speakers and large display" />
+        <h3>Audio / Video Systems</h3>
+        <p>Discrete high-performance sound and cinema-grade visuals.</p>
+      </article>
+      <article class="card">
+        <img src="assets/img/services/networking-wifi.webp" alt="Clean home network rack with structured wiring and access points" />
+        <h3>Networking &amp; Wi‑Fi</h3>
+        <p>Rock-solid coverage, fast speeds, and pro-grade reliability.</p>
+      </article>
+      <article class="card">
+        <img src="assets/img/services/motorized-shades-bast.webp" alt="Automated roller shades filtering daylight in a modern living room" />
+        <h3>Shades &amp; Drapery (BAST)</h3>
+        <p>Silent motors, precise control, and designer fabrics.</p>
+      </article>
+      <article class="card">
+        <img src="assets/img/services/smart-lighting.webp" alt="Smart lighting scene controlled from a phone in a modern kitchen" />
+        <h3>Lighting &amp; Scenes</h3>
+        <p>Beautiful scenes, schedules, and occupancy logic.</p>
+      </article>
+      <article class="card">
+        <img src="assets/img/services/security-surveillance.webp" alt="Discreet security camera integrated on a modern home exterior" />
+        <h3>Security &amp; Cameras</h3>
+        <p>Surveillance, access control, and smart alerts.</p>
+      </article>
+      <article class="card">
+        <img src="assets/img/services/pro-integration.webp" alt="Wall-mounted touch panel controlling whole-home systems" />
+        <h3>Control4 / Savant / Crestron</h3>
+        <p>Professional integrations for advanced control and reliability.</p>
+      </article>
+      <article class="card">
+        <img src="assets/img/services/commercial-automation.webp" alt="Automated conference room with AV, lighting, and networking" />
+        <h3>Commercial Automation &amp; Networking</h3>
+        <p>Boardrooms, retail, and offices engineered for performance.</p>
+      </article>
+      <article class="card">
+        <img src="assets/img/services/multi-room-audio.webp" alt="Whole-home audio with discreet ceiling speakers controlled by an app" />
+        <h3>Multi‑Room Audio</h3>
+        <p>Music in every room—synchronized or individualized.</p>
+      </article>
+      <article class="card">
+        <img src="assets/img/services/remote-access.webp" alt="Smart‑home app controlling lights, shades, and security remotely" />
+        <h3>Remote Access &amp; App Control</h3>
+        <p>Manage your home from anywhere with secure mobile apps.</p>
+      </article>
+    </div>
+  </div>
 </body>
 </html>
