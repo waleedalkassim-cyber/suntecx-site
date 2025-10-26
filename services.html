@@ -74,5 +74,23 @@
       </article>
     </div>
   </div>
+
+<style>
+/* Gold CTA style applied via JS */
+.gold-button{background-color:#000 !important;color:#d4af37 !important;border:1px solid #000 !important;transition:color .3s ease,background-color .3s ease;}
+.gold-button:hover{color:#FFD700 !important;}
+</style>
+<script>
+(function(){
+  var targets = ["get a quote","get a consultation","start now","send request"];
+  var nodes = document.querySelectorAll('a,button');
+  nodes.forEach(function(el){
+    var t = (el.textContent||"").trim().toLowerCase();
+    if (targets.some(function(x){ return t.indexOf(x) !== -1; })) {
+      el.classList.add('gold-button');
+    }
+  });
+})();
+</script>
 </body>
 </html>
